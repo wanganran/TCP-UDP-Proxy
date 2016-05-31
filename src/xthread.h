@@ -51,7 +51,7 @@ namespace global
 #ifdef WIN32
 		friend class boost::detail::basic_condition_variable;	
 #else
-		friend class boost::thread_cv_detail::lock_on_exit<xrecursive_mutex>;
+		friend struct boost::thread_cv_detail::lock_on_exit<xrecursive_mutex>;
 #endif
 
 	private:

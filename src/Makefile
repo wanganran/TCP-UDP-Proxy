@@ -23,13 +23,12 @@ CXXFLAGS = -Wall -Werror $(CXXFLAGS_EXTRA)
 LDFLAGS = -ldl \
 		-lpthread \
 		-rdynamic \
-		/usr/local/lib/libboost_thread.a \
-		/usr/local/lib/libboost_regex.a \
-		/usr/local/lib/libboost_system.a \
-		/usr/local/lib/libboost_filesystem.a \
-		/usr/local/lib/libboost_date_time.a \
-		/usr/local/lib/libboost_program_options.a \
-		-lrt
+		/usr/local/lib/libboost_thread-mt.a \
+		/usr/local/lib/libboost_regex-mt.a \
+		/usr/local/lib/libboost_system-mt.a \
+		/usr/local/lib/libboost_filesystem-mt.a \
+		/usr/local/lib/libboost_date_time-mt.a \
+		/usr/local/lib/libboost_program_options-mt.a 
 
 $(PROG):	$(OBJS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS)  $(OBJS) -o $@ $(LDFLAGS)
